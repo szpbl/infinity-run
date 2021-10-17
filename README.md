@@ -5,6 +5,10 @@
 Esse jogo foi desenvolvido para cumprir o desafio do bootcamp
 Impulso React Web Developer da Digital Innovation One. Em breve, pretendo atualizar o repositório com mais funcionalidades e utilizando gráficos diferentes.
 
+## Funcionalidades adicionadas 
+- [x] Botão de recomeçar
+- [ ] Contar pontuação
+
 Assim que as funcionalidades forem desenvolvidas, será feito deploy e disponibilizado o link para acesso.
 
 ## Autor

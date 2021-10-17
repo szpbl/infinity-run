@@ -1,9 +1,8 @@
 const dino = document.querySelector('.dino');
 const background = document.querySelector('.background');
-const reloadButton = document.getElementById('reload');
+const restartButton = document.createElement('button');
 let isJumping = false;
 let position = 0;
-let gameOver = false;
 
 function handleKeyUp(event) {
   if (event.keyCode === 32) {
@@ -57,6 +56,7 @@ function createCactus() {
         clearInterval(leftInterval);
         gameOver = true;
         document.body.innerHTML = '<h1 class="game-over">Fim de jogo</h1>';
+        createButton();
     } else {
         cactusPosition -= 10;
         cactus.style.left = cactusPosition + 'px';  
@@ -67,5 +67,17 @@ function createCactus() {
     setTimeout(createCactus, randomTime);
 }
 
+function createButton() {
+    const buttonDiv = document.createElement('div');
+    buttonDiv.classList.add('container');
+    restartButton.textContent = 'Recomeçar';
+    buttonDiv.appendChild(restartButton);
+    document.body.appendChild(buttonDiv);
+    restartButton.classList.add('restart');
+    restartButton.addEventListener('click', function() {
+        location.reload();
+    })
+}
 createCactus();
 document.addEventListener('keyup', handleKeyUp);
+

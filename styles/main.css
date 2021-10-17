@@ -5,7 +5,7 @@ body {
 .dino {
     width: 60px;
     height: 60px;
-    background-image: url(/resources/dino.png);
+    background-image: url(../resources/dino.png);
     position: absolute;
     bottom: 0;
 }
@@ -15,7 +15,7 @@ body {
     width: 60px;
     height: 60px;
     bottom: 0;
-    background: url(/resources/cactus.png);
+    background: url(../resources/cactus.png);
 }
 
 .game-over {
@@ -37,10 +37,24 @@ body {
 .background {
     position: absolute;
     bottom: 0;
-    background-image: url(/resources/background.png);
+    background-image: url(../resources/background.png);
     background-repeat: repeat-x;
     animation: slideright 600s infinite linear;
     width: 100%;
     height: 200px;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restart {
+    background-color: #b8b8b8;
+    color: #666666;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
